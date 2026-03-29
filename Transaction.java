@@ -28,4 +28,44 @@ public class Transaction {
         this.date = date;
         this.type = type;
     }
+    
+    /**
+     * Gets the transaction ID
+     * @return the unique identifier for this transaction
+     */
+    public int getId() {
+        return id;
+    }
+    
+    /**
+     * Gets the transaction amount
+     * @return the monetary value of this transaction
+     */
+    public double getAmount() {
+        return amount;
+    }
+    
+    /**
+     * Gets the transaction category
+     * @return the category this transaction belongs to
+     */
+    public String getCategory() {
+        return category;
+    }
+    
+    /**
+     * Gets the transaction date
+     * @return the date when this transaction occurred
+     */
+    public String getDate() {
+        return date;
+    }
+    
+    /**
+     * Gets the transaction type
+     * @return the type of transaction (income or expense)
+     */
+    public String getType() {
+        return type;
+    }
 }
