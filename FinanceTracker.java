@@ -13,4 +13,17 @@ public class FinanceTracker {
             transactions.add(t);
         }
     }
+
+    // Calculate the balance by summing incomes and subtracting expenses.
+    public double getBalance() {
+        double total = 0.0;
+        for (Transaction t : transactions) {
+            if ("INCOME".equals(t.getType())) {
+                total += t.getAmount();
+            } else if ("EXPENSE".equals(t.getType())) {
+                total -= t.getAmount();
+            }
+        }
+        return total;
+    }
 }
