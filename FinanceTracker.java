@@ -26,4 +26,9 @@ public class FinanceTracker {
         }
         return total;
     }
+
+    // Return a copy of all transactions.
+    public ArrayList<Transaction> getAllTransactions() {
+        return new ArrayList<>(transactions);
+    }
 }
