@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        FinanceTracker tracker = new FinanceTracker();
+        int nextId = 1;
 
         while (true) {
             System.out.println("\n=== Finance Tracker ===");
@@ -28,6 +30,10 @@ public class Main {
 
                     System.out.print("Enter date: ");
                     String date = scanner.nextLine();
+
+                    Transaction transaction = new Transaction(nextId++, amount, category, date, type);
+                    tracker.addTransaction(transaction);
+                    System.out.println("Transaction added successfully!");
                     break;
                 case 2:
                     System.out.println("Feature pending");
