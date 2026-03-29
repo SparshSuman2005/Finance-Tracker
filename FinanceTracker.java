@@ -7,5 +7,10 @@ public class FinanceTracker {
         this.transactions = new ArrayList<>();
     }
 
-    // future methods: addTransaction, getBalance, getHistory, etc.
+    // Add a transaction to the tracker while keeping list integrity intact.
+    public void addTransaction(Transaction t) {
+        if (t != null) {
+            transactions.add(t);
+        }
+    }
 }
