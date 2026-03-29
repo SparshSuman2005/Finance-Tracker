@@ -16,7 +16,18 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Feature pending");
+                    System.out.print("Enter amount: ");
+                    double amount = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    System.out.print("Enter type (INCOME/EXPENSE): ");
+                    String type = scanner.nextLine();
+
+                    System.out.print("Enter category: ");
+                    String category = scanner.nextLine();
+
+                    System.out.print("Enter date: ");
+                    String date = scanner.nextLine();
                     break;
                 case 2:
                     System.out.println("Feature pending");
