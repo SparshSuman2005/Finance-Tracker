@@ -40,7 +40,9 @@ public class Main {
                     System.out.printf("Current Balance: $%.2f%n", balance);
                     break;
                 case 3:
-                    System.out.println("Feature pending");
+                    for (Transaction t : tracker.getAllTransactions()) {
+                        System.out.println(t.toString());
+                    }
                     break;
                 case 4:
                     System.out.println("Feature pending");
