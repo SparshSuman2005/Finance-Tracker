@@ -36,7 +36,8 @@ public class Main {
                     System.out.println("Transaction added successfully!");
                     break;
                 case 2:
-                    System.out.println("Feature pending");
+                    double balance = tracker.getBalance();
+                    System.out.printf("Current Balance: $%.2f%n", balance);
                     break;
                 case 3:
                     System.out.println("Feature pending");
