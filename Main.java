@@ -11,6 +11,25 @@ public class Main {
             System.out.println("3. View History");
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Feature pending");
+                    break;
+                case 2:
+                    System.out.println("Feature pending");
+                    break;
+                case 3:
+                    System.out.println("Feature pending");
+                    break;
+                case 4:
+                    System.out.println("Feature pending");
+                    break;
+                default:
+                    System.out.println("Invalid option");
+            }
         }
     }
 }
