@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -14,12 +15,26 @@ public class Main {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
-            int choice = scanner.nextInt();
+            int choice;
+            try {
+                choice = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a number between 1 and 4.");
+                scanner.nextLine();
+                continue;
+            }
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter amount: ");
-                    double amount = scanner.nextDouble();
+                    double amount;
+                    try {
+                        amount = scanner.nextDouble();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid amount. Please enter a valid number.");
+                        scanner.nextLine();
+                        continue;
+                    }
                     scanner.nextLine();
 
                     System.out.print("Enter type (INCOME/EXPENSE): ");
