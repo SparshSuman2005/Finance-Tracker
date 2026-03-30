@@ -45,8 +45,9 @@ public class Main {
                     }
                     break;
                 case 4:
-                    System.out.println("Feature pending");
-                    break;
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
                 default:
                     System.out.println("Invalid option");
             }
