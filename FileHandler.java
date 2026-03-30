@@ -6,9 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Handles file I/O operations for saving and loading transactions.
+ */
 public class FileHandler {
+    /** The default filename for storing transaction data. */
     public static final String FILENAME = "finance_data.txt";
 
+    /**
+     * Saves a list of transactions to a CSV file.
+     *
+     * @param list the list of transactions to save
+     */
     public static void saveTransactions(List<Transaction> list) {
         try (PrintWriter writer = new PrintWriter(new FileOutputStream(FILENAME))) {
             for (Transaction t : list) {
@@ -24,6 +33,11 @@ public class FileHandler {
         }
     }
 
+    /**
+     * Loads transactions from the data file.
+     *
+     * @return a list of loaded transactions, or an empty list if the file does not exist
+     */
     public static List<Transaction> loadTransactions() {
         List<Transaction> transactions = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(FILENAME))) {

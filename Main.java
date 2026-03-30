@@ -1,7 +1,16 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * The main entry point for the Finance Tracker application.
+ * Provides a command-line interface for managing financial transactions.
+ */
 public class Main {
+    /**
+     * The main method that runs the Finance Tracker application.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         FinanceTracker tracker = new FinanceTracker();

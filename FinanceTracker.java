@@ -1,9 +1,16 @@
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Manages a collection of financial transactions and provides methods for
+ * tracking income, expenses, and calculating balances.
+ */
 public class FinanceTracker {
     private ArrayList<Transaction> transactions;
 
+    /**
+     * Constructs a new FinanceTracker and loads existing transactions from file if available.
+     */
     public FinanceTracker() {
         this.transactions = new ArrayList<>();
         if (new File(FileHandler.FILENAME).exists()) {
@@ -11,14 +18,22 @@ public class FinanceTracker {
         }
     }
 
-    // Add a transaction to the tracker while keeping list integrity intact.
+    /**
+     * Adds a transaction to the tracker.
+     *
+     * @param t the transaction to add
+     */
     public void addTransaction(Transaction t) {
         if (t != null) {
             transactions.add(t);
         }
     }
 
-    // Calculate the balance by summing incomes and subtracting expenses.
+    /**
+     * Calculates the current balance by summing all incomes and subtracting all expenses.
+     *
+     * @return the current balance
+     */
     public double getBalance() {
         double total = 0.0;
         for (Transaction t : transactions) {
@@ -31,7 +46,11 @@ public class FinanceTracker {
         return total;
     }
 
-    // Return a copy of all transactions.
+    /**
+     * Returns a copy of all transactions in the tracker.
+     *
+     * @return a new ArrayList containing all transactions
+     */
     public ArrayList<Transaction> getAllTransactions() {
         return new ArrayList<>(transactions);
     }
