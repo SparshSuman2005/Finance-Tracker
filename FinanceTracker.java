@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 
 public class FinanceTracker {
@@ -5,6 +6,9 @@ public class FinanceTracker {
 
     public FinanceTracker() {
         this.transactions = new ArrayList<>();
+        if (new File(FileHandler.FILENAME).exists()) {
+            this.transactions.addAll(FileHandler.loadTransactions());
+        }
     }
 
     // Add a transaction to the tracker while keeping list integrity intact.
