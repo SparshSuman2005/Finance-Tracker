@@ -1,6 +1,9 @@
-# Finance Tracker
+4# Finance Tracker
 
 A simple command-line Java application for tracking personal income and expenses.
+
+**Author:** Sparsh Kumar Suman  
+**Registration No:** 24BAI10205
 
 ## Features
 
