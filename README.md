@@ -1,4 +1,4 @@
-4# Finance Tracker
+ Finance Tracker
 
 A simple command-line Java application for tracking personal income and expenses.
 
