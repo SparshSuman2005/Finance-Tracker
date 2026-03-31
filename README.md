@@ -22,7 +22,7 @@ A simple command-line Java application for tracking personal income and expenses
 Compile all Java files from the project directory:
 
 ```bash
-javac *.java
+javac FileHandler.java FinanceTracker.java Main.java Transaction.java
 ```
 
 ## Running the Application
@@ -30,7 +30,7 @@ javac *.java
 Run the compiled application:
 
 ```bash
-java Main
+java -cp . Main
 ```
 
 ## Usage
